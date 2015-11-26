@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+   
+    binding:animation="AFTERCOMMAND(IF(Passed,@anim/nod,@anim/shake),Verify)">
+    <!--  binding:background="Wallpaper"-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:background="#499df5"
+         android:paddingLeft="5dp"
+            android:paddingRight="5dp" >
+
+        <!--
+              <TextView
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:textColor="#333"
+		    android:textSize="40sp"
+		    android:text="SnappLock"
+		    />
+        -->
+
+        <FrameLayout
+            android:id="@+id/camera_preview"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true" >
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/icon_View"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40sp"
+             />
+        <TextView
+            android:id="@+id/app_name"
+             android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+             android:textColor="#ffffff"
+            android:textSize="20sp"
+		/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60sp"
+            android:background="#ffffff"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:password="true"
+              
+            android:shadowColor="#000000"
+            android:textColor="#499df5"
+            android:textSize="38sp"
+            binding:text="Password" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="218dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.12"
+            android:background="#499df5"
+            android:gravity="center_vertical"
+            android:paddingBottom="0dp"
+                                android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+            
+            android:stretchColumns="0,1,2,3"
+            android:top="500dp" >
+
+            <TableRow>
+
+                <Button
+                    style="@style/CodeFont"
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:background="@drawable/lockscreen_button"
+                   
+                    android:text="1"
+                    binding:onClick="ARG(Number,1)" />
+
+                <Button
+                    style="@style/CodeFont"
+                                        android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/lockscreen_button"
+                    android:text="2"
+                    binding:onClick="ARG(Number,2)" />
+
+                <Button
+                    style="@style/CodeFont"
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/lockscreen_button"
+                    android:text="3"
+                    binding:onClick="ARG(Number,3)" />
+            </TableRow>
+
+            <TableRow  >
+
+                <Button
+                    style="@style/CodeFont"
+                    android:layout_width="45dp"
+                    android:layout_height="60dp"
+                    android:background="@drawable/lockscreen_button"
+                    android:text="4"
+                    binding:onClick="ARG(Number,4)" />
+
+                <Button
+                    style="@style/CodeFont"
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/lockscreen_button"
+                    android:text="5"
+                    binding:onClick="ARG(Number,5)" />
+
+                <Button
+                    style="@style/CodeFont"
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/lockscreen_button"
+                    android:text="6"
+                    binding:onClick="ARG(Number,6)" />
+            </TableRow>
+
+            <TableRow  >
+
+                <Button
+                    style="@style/CodeFont"
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/lockscreen_button"
+                    android:hapticFeedbackEnabled="true"
+                    android:text="7"
+                    binding:onClick="ARG(Number,7)" />
+
+                <Button
+                    style="@style/CodeFont"
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/lockscreen_button"
+                    android:text="8"
+                    binding:onClick="ARG(Number,8)" />
+
+                <Button
+                    style="@style/CodeFont"
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/lockscreen_button"
+                    android:text="9"
+                    binding:onClick="ARG(Number,9)" />
+            </TableRow>
+
+            <TableRow>
+
+                <Button
+                    style="@style/CodeFont2"
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/clearbutton"
+                    android:text="C"
+                    binding:onClick="Clear" />
+
+                <Button
+                    style="@style/CodeFont"
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/lockscreen_button"
+                    android:text="0"
+                    binding:onClick="ARG(Number,0)" />
+
+                <Button
+                    android:id="@+id/button_capture"
+                    style="@style/CodeFont2"
+                    android:layout_width="45sp"
+                    android:layout_height="60sp"
+                    android:background="@drawable/okbutton"
+                    android:onClick="send"
+                    android:text="OK"
+                    binding:onClick="Verify" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</LinearLayout>

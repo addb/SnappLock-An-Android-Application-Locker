@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    >
+    
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="80dip"
+    android:padding="5dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    
+    android:theme="@style/Light"
+     binding:onClick="ToggleIncluded"
+    >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="42sp"
+        android:layout_height="42sp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:scaleType="fitCenter"
+        binding:source="Icon"
+        tools:ignore="MissingPrefix" />
+
+    
+
+     <TextView
+         android:id="@+id/appName"
+         android:layout_width="180sp"
+         android:layout_height="42sp"
+         android:layout_alignTop="@+id/imageView1"
+         android:layout_centerHorizontal="true"
+         android:ellipsize="marquee"
+         android:gravity="center_horizontal"
+         android:maxLines="2"
+         android:textSize="8pt"
+         binding:text="Label" />
+
+     <LinearLayout
+         android:id="@+id/check"
+         android:layout_width="30sp"
+         android:layout_height="30sp"
+         android:layout_alignParentRight="true"
+         android:layout_centerVertical="true"
+         android:layout_marginRight="14dp"
+         binding:background="IF(Included, @drawable/notify,0)" >
+     </LinearLayout>
+    
+    
+
+</RelativeLayout>
+ <View android:layout_width="fill_parent"
+        android:layout_height="5dp"
+        android:background="#888888" />
+  <View android:layout_width="fill_parent"
+        android:layout_height="7dp"
+        android:background="#dddddd" />
+ 
+</RelativeLayout>

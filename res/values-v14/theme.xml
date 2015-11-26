@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <style name="Light" parent="@android:style/Theme.DeviceDefault.Light.DarkActionBar">
+        <!-- Any customizations for your app running on 4.0+ devices here -->
+          <!-- ActionBar styles -->
+          </style>
+    <style name="MyActionBar"
+           parent="@style/Light">
+        <item name="android:background">#006699</item>
+    </style>
+</resources>

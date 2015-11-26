@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://www.gueei.com/android-binding/"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#dddddd" >
+
+   
+
+    <ListView
+        android:id="@+id/appselect"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:horizontalSpacing="20dip"
+        android:paddingLeft="8dip"
+    android:paddingRight="8dip"
+    
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        binding:itemSource="Applications"
+        binding:itemTemplate="@layout/applicationlist_item" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+       <LinearLayout
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:gravity="left" 
+           android:background="#222222">
+
+        <Button
+            android:id="@+id/lockall"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_toLeftOf="@+id/lockimp"
+            android:alpha="1"
+            android:background="#33b5e5"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Lock All"
+            android:textColor="#ffffff"
+            android:textSize="6pt"
+            binding:onClick="SelectAll" />
+
+         <Button
+             android:id="@+id/unlockall"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+            android:layout_weight="1"
+             android:layout_alignParentRight="true"
+             android:layout_alignParentTop="true"
+             android:alpha="1"
+             android:background="#99cc00"
+             android:gravity="center_horizontal|center_vertical"
+             android:text="Unlock All"
+             android:textColor="#ffffff"
+             android:textSize="6pt"
+             binding:onClick="DeselectAll" />
+
+         <Button
+             android:id="@+id/lockimp"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:layout_alignParentTop="true"
+             android:layout_centerHorizontal="true"
+             android:alpha="1"
+             android:background="#cc0000"
+             android:gravity="center"
+             android:paddingLeft="5px"
+             android:paddingRight="5px"
+             android:text="Lock Important"
+             android:textColor="#ffffff"
+             android:textSize="6pt"
+             binding:onClick="SelectAllImportant" />
+       
+   </LinearLayout> 
+
+    </LinearLayout>
+
+</LinearLayout>

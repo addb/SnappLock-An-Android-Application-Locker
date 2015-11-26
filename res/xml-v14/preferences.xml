@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Enable AppLocker" >
+        <SwitchPreference
+            android:key="service_enabled"
+            android:summaryOff="SnappLock Disabled"
+            android:summaryOn="SnappLock Running"
+            android:title="Enable/Disable" />
+
+        <CheckBoxPreference
+            android:dependency="service_enabled"
+            android:key="start_service_after_boot"
+            android:summaryOff="Manually startup service after reboot"
+            android:summaryOn="Auto enable AppLocker after reboot"
+            android:title="Auto Start Service" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="General" >
+        <EditTextPreference
+            android:inputType="number"
+            android:key="password"
+            android:summary="Edit the Unlock password"
+            android:title="Edit Password(default:1234)" />
+
+        <CheckBoxPreference
+            android:key="relock_policy"
+            android:summaryOff="Require password everytime the blocked app is launched."
+            android:summaryOn="Password is not required after unlocking for a period of time"
+            android:title="Relock Policy" />
+
+        <ListPreference
+            android:dependency="relock_policy"
+            android:dialogTitle="Relock Timeout"
+            android:entries="@array/relock_timeout_entries"
+            android:entryValues="@array/relock_timeout_values"
+            android:key="relock_timeout"
+            android:summary="Minutes of time before the app is relocked"
+            android:title="Relock timeout" />        
+       <SwitchPreference
+            android:key="autoverify"
+            android:summaryOff="You need to press OK button to verify"
+            android:summaryOn="Auto verify enabled! You need not press OK!"
+            
+            android:title="Auto Verify" />
+        </PreferenceCategory>
+        
+   <PreferenceCategory android:title="SMS Service" >
+        <SwitchPreference
+            android:key="sms_service"
+            android:summaryOff="SMS Service Disabled"
+            android:summaryOn="SMS Service Running"
+            android:title="Enable/Disable SMS Service" />
+         
+        <EditTextPreference
+       android:dependency="sms_service"
+            android:inputType="number"
+            android:key="phoneNo"
+            android:summary="Edit the phone number"
+            android:title="Enter phone number of the person to be notified"/>
+      
+     <EditTextPreference
+       android:dependency="sms_service"
+            android:inputType="text"
+            android:key="message"
+            android:summary="Edit the alert message"
+            android:title="Enter the message to be notified to the above phone number"/>
+    </PreferenceCategory>
+    	<!--   <CheckBoxPreference
+    	     android:dependency="service_enabled"
+            android:key="random"
+            android:summaryOff="Random Keypad Disabled"
+            android:summaryOn="Random Keypad Enabled"
+            android:title="Enable/Disable Random Keypad" />-->
+        <PreferenceCategory android:title="ALert Service">
+    	 <CheckBoxPreference
+    	     android:dependency="service_enabled"
+            android:key="alert"
+            android:summaryOff="Alert Tone Disabled"
+            android:summaryOn="Alert Tone Enabled"
+            android:title="Enable/Disable Alert Tone" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

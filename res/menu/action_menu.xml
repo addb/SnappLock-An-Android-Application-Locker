@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Search, should appear as action button -->
+
+
+    <!-- Settings, should always be in the overflow -->
+
+    <group>
+        
+        <item
+            android:id="@+id/action_about"
+            android:icon="@drawable/ic_action_about"
+            android:orderInCategory="2"
+            android:showAsAction="never"
+            android:title="@string/action_about"/>
+        <item
+            android:id="@+id/action_help"
+            android:icon="@drawable/ic_action_help"
+            android:orderInCategory="1"
+            android:showAsAction="ifRoom"
+            android:title="Help"/>
+        
+        
+      <!-- <item
+   		android:id="@+id/myswitch"
+        android:title=""
+        android:showAsAction="always"
+        android:actionLayout="@xml/switch_layout"
+    /> --> 
+    </group>
+
+</menu>
